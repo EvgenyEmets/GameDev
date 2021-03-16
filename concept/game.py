@@ -42,7 +42,7 @@ while True:
             for j in range(map_size):
                 color_val = game_map[i][j] * 50
                 color = (color_val, color_val, color_val)
-                pygame.draw.rect(screen, color, pygame.Rect((i-pos_x+5)*scale_size, (j-pos_y+shift)*scale_size, scale_size, scale_size))
+                pygame.draw.rect(screen, color, pygame.Rect(int((i-pos_x+5.5)*scale_size), int((j-pos_y+shift)*scale_size), scale_size, scale_size))
         pygame.display.flip()
         RESIZE = False
     if MOVE:
@@ -54,7 +54,7 @@ while True:
                 for j in range(map_size):
                     color_val = game_map[i][j] * 50
                     color = (color_val, color_val, color_val)
-                    pygame.draw.rect(screen, color, pygame.Rect(int((i-pos_x+5)*scale_size), int((j-pos_y+shift)*scale_size), scale_size, scale_size))
+                    pygame.draw.rect(screen, color, pygame.Rect(int((i-pos_x+5.5)*scale_size), int((j-pos_y+shift)*scale_size), scale_size, scale_size))
             #pos_x = min(max(pos_x+s_x/5, 0), map_size)
             #pos_y = min(max(pos_y+s_y/5, 0), map_size)
 
